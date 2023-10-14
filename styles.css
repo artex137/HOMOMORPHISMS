@@ -1,0 +1,53 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 12px #aaa;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.summary-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.summary-image {
+    max-width: 80%;
+    margin-top: 20px;
+}
+
+.summary-description {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #555;
+}

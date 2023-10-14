@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homomorphic Art Gallery</title>
+    <style>
+        #slider {
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #slider img {
+            width: 100%;
+            display: none;
+        }
+
+        #slider img.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+        <img src="images/Homomorphic Art/0befdcf7-9a05-4ffb-aced-d0b70252af52.webp" alt="Art 1" class="active">
+        <img src="images/Homomorphic Art/1637cdaa-203b-4159-a13a-65e46e89e5f9.webp" alt="Art 2">
+        <!-- Add all other images similarly -->
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('#slider img');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000);  // Change images every 3 seconds.
+    </script>
+</body>
+
+</html>
